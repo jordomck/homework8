@@ -25,6 +25,8 @@ submitButton.addEventListener("click", function(event){
 	} else { 
 		nameError.style.display = "none"; 
 	}
+	event.preventDefault();
+	submitButton.submit();
 
 
 });
