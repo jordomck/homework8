@@ -8,25 +8,28 @@ var addrError = document.getElementById("addrError");
 
 
 submitButton.addEventListener("click", function(event){
+	clear1 = clear2 = false;
+	event.preventDefault();
 
 	if (addrField.value == ""){
 		addrError.style.display = "block";
-		event.preventDefault(); //intercept form submit
 		addrField.focus();
 	} else {
+		clear1=true;
 		addrError.style.display = "none";
 	}
 
 
 	if(nameField.value == ""){
 		nameError.style.display = "block";
-		event.preventDefault();
 		nameField.focus(); //overwrites focus of addrfield if both are empty
 	} else { 
+		clear2=true;
 		nameError.style.display = "none"; 
 	}
-	event.preventDefault();
-	submitButton.submit();
-
+	
+	if(clear1 && clear2){
+		window.location.href = "challenge5.html";
+	}
 
 });
