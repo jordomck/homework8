@@ -21,3 +21,4 @@ $(".thumbnail").hover(
 	);
 
 $(".thumbnail").focus(function(){enter(event);}); //keyboard accessibility
+$(".thumbnail").blur(function(){leave(event);});
