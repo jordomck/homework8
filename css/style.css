@@ -6,6 +6,7 @@ body{
 	font-size: 125%;
 	color:#B80000;
 	font-weight: bold;
+	display: none;
 }
 
 .errormsg{
